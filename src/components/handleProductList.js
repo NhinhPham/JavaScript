@@ -13,9 +13,9 @@ function callAPI(nodeElement) {
         (item) => /*html*/ `
         
 <div class="">
-      <div class="h-[500px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+      <div class="h-[300px] bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
     <a href="#">
-        <img class=" rounded-t-lg object-fill h-32 w-full "   src="${item.thumbnail}" alt="product image" />
+        <img class=" rounded-t-lg  h-32 w-20% "   src="${item.thumbnail}" alt="product image" />
     </a>
     <div class="px-5 pb-5">
         <a href="#">
@@ -41,7 +41,7 @@ function callAPI(nodeElement) {
             </div>
             <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">5.0</span>
         </div>
-        <div class="flex items-center justify-between">
+        <div class="flex items-center justify-between my-[20px]">
             <span class="text-xl font-bold text-gray-900 dark:text-white">$${item.price}</span>
             <a href="#" id="addCart" class="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900">Add to cart</a>
             <button type="button" class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"><a class="" href="detail/${item.id}">Xem chi tiết</a></button>
