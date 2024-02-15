@@ -1,10 +1,14 @@
 import instance from "../apis";
 import { checkAdmin } from "../utils/checkPermission";
 import showToast from "../utils/toastMessage";
+import { router } from "../utils";
 
 const handleAdmin = () => {
   const productList = document.querySelector("#productList");
-
+  const addNew = document.getElementById("addNew");
+  addNew.addEventListener("click", () => {
+    router.navigate("/admin/add");
+  });
   const handleDelete = (productId) => {
     instance
       .delete(`/products/${productId}`)
@@ -20,7 +24,9 @@ const handleAdmin = () => {
   };
 
   // Function to handle product editing
-  const handleEdit = (productId) => {};
+  const handleEdit = (productId) => {
+    router.navigate(`/admin/add/${productId}`);
+  };
 
   productList.addEventListener("click", (event) => {
     const target = event.target;

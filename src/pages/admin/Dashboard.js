@@ -4,8 +4,8 @@ const Dashboard = () => {
   return /*html*/ `
   ${Header()}
   <div class="container">
-    <h1>Hello, Admin</h1>
-    <a href="/admin/add-new" class="btn btn-primary">Add new</a>
+    <h1>Hello, Nhinh</h1>
+    <button class="btn btn-primary" id="addNew">Add new</button>
     <div id="productList"></div>
   </div>
   
